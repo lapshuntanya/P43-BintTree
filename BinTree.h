@@ -26,9 +26,20 @@ class BinTree {
             showSubTree(p->right);
         }
     }
+
+    void delSubTree(Node<U>*p) {
+        if (p!=nullptr) {
+            delSubTree(p->left);
+            delSubTree(p->right);
+            cout << "DELETE: " << p->info << endl;
+            delete p;
+        }
+    }
 public:
     BinTree() { root = nullptr; }
-    ~BinTree() {}
+    ~BinTree() {
+        delSubTree(root);
+    }
 
     void insert(U value) {
         //1 - Створюємо вузол

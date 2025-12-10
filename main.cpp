@@ -16,15 +16,15 @@ int main() {
     tree.insert(-1);
 
     cout << "======================================="<<endl;
-    int  a = 0;
+   /* int  a = 0;
     cout << "Input a: "; cin >> a;
     auto find = tree.search(a);
     if (find != nullptr) {
         find->showNode();
     }else {
         cout << "not found\n";
-    }
+    }*/
     cout << "======================================="<<endl;
-
+    tree.showTree();
     return 0;
 }
