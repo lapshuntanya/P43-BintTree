@@ -3,4 +3,5 @@ project(P43_binTree)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(P43_binTree main.cpp)
+add_executable(P43_binTree main.cpp
+        BinTree.h)
