@@ -18,6 +18,14 @@ public:
 template <typename U>
 class BinTree {
     Node<U>* root; //Вказівник на перший вузол у дереві
+
+    void showSubTree(Node<U>*p) {
+        if (p!=nullptr) {
+            showSubTree(p->left);
+            cout << p->info << " ";
+            showSubTree(p->right);
+        }
+    }
 public:
     BinTree() { root = nullptr; }
     ~BinTree() {}
