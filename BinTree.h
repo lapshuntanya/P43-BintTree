@@ -71,9 +71,12 @@ public:
     //Повний обхід дерева
     void showTree() {
         if (root == nullptr)
-            cout << "Дерево контейнерів порожнє!" << endl;
+            cout << "Tree is empty!" << endl;
         else {
-            // . . .
+            showSubTree(root->left);
+            cout << root->info << " ";
+            showSubTree(root->right);
+            cout << endl;
         }
     }
 
